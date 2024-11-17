@@ -2,8 +2,10 @@
 
 ## 自己紹介
 
+初めまして。トー　ミン　アイン　ともうします。👋
 Xin chào, mình là Ánh! 👋
 
+これは、データ構造とアルゴリズム（DSA）の自習中に、コードやメモを保管するために使用しているリポジトリです。
 Đây là repo mình dùng để lưu trữ code và ghi chú trong quá trình tự học môn Cấu trúc dữ liệu và giải thuật (DSA). 
 
 ## 目的
@@ -31,4 +33,4 @@ mail: minhanhs.2205@gmail.com
 
 ---
 
-**Cảm ơn bạn đã ghé thăm repo của mình!** 😊
+**どうぞよろしくお願いしまうう** 😊
