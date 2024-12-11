@@ -2,7 +2,7 @@
 
 int main() {
     int n, i;
-    int a[1000000];
+    int a[1000];
     int maxLen = 1;  // Độ dài chuỗi tăng dài nhất, khởi tạo là 1
     int currentLen = 1; // Độ dài chuỗi tăng hiện tại
 
