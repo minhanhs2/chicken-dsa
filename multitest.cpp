@@ -9,7 +9,7 @@ int main() {
     cin >> box >> phone;
     box = box * 0.75;
     int time = box / phone;
-    cout << time;
+    cout << time + 1;
 
     return 0;
 }

@@ -1,28 +1,26 @@
-//C++ 
-#include <bits/stdc++.h> 
-#include <vector>
-#include <algorithm>
-
+#include <bits/stdc++.h>
 using namespace std;
-int main() { 
-	int n; 
-	cin >> n;
-	vector<double> a;
-	a.resize(n); 
-	for (int i = 0; i < n; i++) {
-        cin >> a[i];
-    }
-	sort (a.begin(), a.end()); //sap xep mang
+#define MODULO 1000000007;
 
-	int count = 0;
-	int i=0, j=1;
-	while (j < n) {
-        if (a[j] - a[i] == 1 || a[i] - a[j] == 1) {
-            count++;
-        } 
-        i++;
-        j++;
+int n;
+map<int,int> frequency;
+
+int cal(int a){
+    int result = (a-1)*a/2;
+    return result;
+}
+
+int main(){
+    cin >> n;
+    int a;
+    for (int i=0;i<n;i++){
+        cin >> a;
+        frequency[a]++;
     }
-	cout << count << endl;
-	return 0;
+    int sum = 0;
+    for (auto& pair : frequency){
+        sum+=cal(pair.second);
+        sum= sum % MODULO;
+    }
+    cout << sum;
 }
