@@ -1,30 +1,23 @@
 #include <stdio.h>
 
 int main() {
-    int n, i;
-    int a[1000];
-    int maxLen = 1;  // Độ dài chuỗi tăng dài nhất, khởi tạo là 1
-    int currentLen = 1; // Độ dài chuỗi tăng hiện tại
-
-    // Nhập dữ liệu
+    int n;
+    double nums[10000];
+    double target;
+    
     scanf("%d", &n);
-    for (i = 0; i < n; i++) {
-        scanf("%d", &a[i]);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &nums[i]);
     }
+    scanf("%d", &target); 
 
-    // Tìm chuỗi tăng dài nhất
-    for (i = 1; i < n; i++) {
-        if (a[i] > a[i - 1]) {
-            currentLen++; // Nếu giá trị hiện tại lớn hơn giá trị trước đó, tăng độ dài chuỗi hiện tại
-            if (currentLen > maxLen) {
-                maxLen = currentLen; // Cập nhật độ dài chuỗi tăng dài nhất
+    for (int i = 0; i < n; i++) {
+        for (int j = i+1; j <n; j++) {
+            if (nums[i] + nums[j] == target) {
+                printf ("[%d,%d]", i, j);
             }
-        } else {
-            currentLen = 1; // Ngược lại, reset độ dài chuỗi hiện tại
         }
     }
 
-    // In kết quả
-    printf("%d", maxLen);
     return 0;
 }
